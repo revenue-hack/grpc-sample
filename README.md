@@ -1,10 +1,15 @@
 # grpc-sample
 
-## install
+## setup
 ```
-go get -u google.golang.org/grpc
-go get -u github.com/golang/protobuf/protoc-gen-go
+make setup
 ```
 
-### install protocol buffers every os
+### install protoc command for os
 https://github.com/protocolbuffers/protobuf/releases
+
+### cat example
+```
+make build_cat
+make run_cat
+```
