@@ -1,4 +1,4 @@
-.PHONY: setup, build_cat,run_cat
+.PHONY: setup, build_cat, run_cat, build_person, run_person
 
 setup:
 	go get -u google.golang.org/grpc
@@ -9,4 +9,9 @@ build_cat:
 run_cat:
 	./cat/server &
 	./cat/client
-
+build_person:
+	go build -o person/client person/client.go
+	go build -o person/server person/server.go
+run_person:
+	./person/server &
+	./person/client
