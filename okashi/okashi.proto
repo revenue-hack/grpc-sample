@@ -1,0 +1,15 @@
+syntax = "proto3";
+service OkashiService {
+  rpc GetFavoriteOkashi (GetOkashiMessage) returns (OkashiResponse) {}
+}
+
+message GetOkashiMessage {
+  string name = 1;
+  int32 like_freq = 2;
+}
+
+message OkashiResponse {
+  string name = 1;
+  int32 eval = 2;
+}
+
